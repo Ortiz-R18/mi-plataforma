@@ -1,0 +1,283 @@
+/* Importar la fuente Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Estilos generales */
+html {
+    font-size: 12px; /* Tamaño base para el cuerpo */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem; /* Tamaño relativo basado en 12px */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Color de texto más suave */
+    min-height: 100vh; /* Asegura que el contenido ocupe al menos la altura de la ventana */
+    position: relative; /* Necesario para el pseudo-elemento */
+    background-color: #f4f4f4; /* Fondo de la página */
+}
+
+/* Fondo de opacidad */
+body::before {
+    content: ""; /* Necesario para el pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://images.pexels.com/photos/265072/pexels-photo-265072.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* Estilos del contenedor principal */
+.container {
+    margin-left: 220px; /* Espaciado para no interferir con el nav */
+    padding: 20px; /* Espaciado interno para el contenedor */
+    background-color: rgba(255, 255, 255, 0); /* Fondo blanco con opacidad */
+}
+
+/* Tamaños para títulos */
+h1 {
+    font-size: 2rem; /* 24px */
+    margin-bottom: 10px; /* Espaciado inferior */
+    color: #2c3e50; /* Color oscuro para encabezados */
+}
+
+h2 {
+    font-size: 1.5rem; /* 18px */
+    margin-bottom: 8px; /* Espaciado inferior */
+}
+
+h3 {
+    font-size: 1.25rem; /* 15px */
+    margin-bottom: 6px; /* Espaciado inferior */
+}
+
+h4, h5, h6 {
+    font-size: 1rem; /* Igual a 12px */
+}
+
+/* Configuración de tamaño para otros textos en 12px */
+p, li, input, button, select, label, .modal-content {
+    font-size: 1rem; /* 12px basado en html 12px */
+}
+
+/* Logo de encabezado */
+.logo-encabezado {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: auto;
+    max-width: 300px;
+}
+
+/* Logo centrado */
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: auto;
+    max-width: 100%;
+}
+
+/* Estilos de los botones */
+button {
+    position: relative;
+    z-index: 2;
+    background-color: #e49a1d; /* Color amarillo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem; /* 12px */
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efecto de transición */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+button:hover {
+    background-color: #e10707; /* Color más oscuro al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Menú de navegación */
+.nav-list {
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+    width: 220px; /* Ancho fijo para el menú */
+    position: fixed; /* Fijar el menú en la pantalla */
+    top: 0;
+    left: 0;
+    height: 100%; /* Altura completa */
+    overflow-y: auto; /* Desplazamiento si el contenido excede el tamaño */
+    z-index: 1000; /* Asegúrate de que esté en la parte superior */
+}
+
+.nav-list li {
+    margin: 10px 0;
+}
+
+.nav-list li a {
+    font-size: 1rem; /* 12px */
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px; /* Bordes redondeados para los enlaces */
+    transition: background-color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    background-color: #575757; /* Color de fondo al pasar el mouse */
+}
+
+.logo-nav {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Estilos de tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco con 80% de opacidad */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+th, td {
+    padding: 9px; /* Relleno vertical y horizontal */
+    text-align: left;
+    border: 1px solid #ccc; /* Borde delgado y claro */
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo sutil para los encabezados */
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Resaltar fila al pasar el ratón */
+}
+
+/* Estilos del checkbox personalizado */
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px; /* Espacio para el checkbox */
+    cursor: pointer;
+    user-select: none; /* Evitar selección de texto */
+}
+
+.custom-checkbox input {
+    display: none; /* Ocultar el checkbox original */
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px; /* Tamaño del checkbox */
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo de la marca */
+    border: 1px solid #ccc; /* Borde claro */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-color: #DA8F10; /* Color al seleccionar */
+}
+
+/* Estilo para la ventana modal */
+.modal {
+    display: none; /* Ocultarla por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px; /* Espaciado superior */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% desde la parte superior y centrado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Puede cambiarse a un tamaño más pequeño */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Color al pasar el mouse */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para el campo de búsqueda */
+#busqueda {
+    width: 100%; /* Ancho del 100% */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior */
+    box-sizing: border-box; /* Incluir padding en el cálculo del ancho */
+    border: 1px solid #ccc; /* Borde similar al de la tabla */
+    border-radius: 5px; /* Bordes redondeados */
+}    
+
+    /* Estilo para el contenedor de botones */
+    .botones {
+        margin-bottom: 10px; /* Margen inferior */
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Espacio entre los grupos de campos */
+    }
+
+    label {
+        display: block; /* Hacer que las etiquetas ocupen toda la línea */
+        margin-bottom: 5px; /* Espacio entre la etiqueta y el campo */
+    }
+
+    .form-control {
+        width: calc(100% - 22px); /* Ajustar el ancho a 100% menos el padding y borde */
+        padding: 10px; /* Espaciado interno */
+        border: 1px solid #ccc; /* Bordes sutiles */
+        border-radius: 4px; /* Bordes redondeados */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        font-size: 16px; /* Tamaño de fuente */
+    }
+
+    /* Estilo para el contenedor de botones */
+    .botones {
+        margin-bottom: 20px; /* Margen inferior para los botones */
+        display: flex; /* Alinear los botones en línea */
+        justify-content: space-between; /* Espacio entre los botones */
+
+        
+    }
+
